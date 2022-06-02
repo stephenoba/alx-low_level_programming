@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S $CFILE > $(cut -d'.' -f1 <<<"$CFILE").s
