@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - Uses _putchar to write alphabets 10x
+ * print_alphabet_x10 - Uses _putchar to write alphabets 10x
  */
 void print_alphabet_x10(void)
 {
