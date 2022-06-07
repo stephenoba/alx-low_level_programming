@@ -3,6 +3,8 @@
 /**
  * print_sign - print the sign of a number.
  *
+ * @n - nuber to check
+ *
  * Return: 1 (positive) -1 (negeive) 0 (zero).
  */
 
