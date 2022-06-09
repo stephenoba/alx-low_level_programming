@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* positive - function to check if a number is + or -
+* positive_or_negative - function to check if a number is + or -
+* @i: number to check
 */
 void positive_or_negative(int i)
 {
