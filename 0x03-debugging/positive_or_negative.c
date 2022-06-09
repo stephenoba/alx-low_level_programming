@@ -3,8 +3,6 @@
 #include <time.h>
 /**
 * positive - function to check if a number is + or -
-*
-* Return: Always 0
 */
 void positive_or_negative(int i)
 {
