@@ -9,19 +9,24 @@ void rev_string(char *s)
 {
 	int i;
 	int j;
-	char new_s[];
+	int mid;
+	char lc; /* holds the left side characters */
+	char rc; /* holds the right side characters */
 
-	new_s = *s;
 	i = 0;
 	while (s[i])
 	{
 		i++;
 	}
-
+	mid = i / 2;
 	j = 0;
-	while (i--)
+	while (mid--)
 	{
-		new_s[j] = s[i];
+		/* performs a swap of characters on both sides */
+		lc = s[j];
+		rc = s[i - (j + 1)];
+		s[j] = rc;
+		s[i - (j + 1)] = lc;
 		j++;
 	}
 }
