@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string, followed by a new line.
+ * puts_half - prints half of a string
  * 
  * @str: string to modify
  */
@@ -16,7 +16,7 @@ void puts_half(char *str)
 			c++;
 		if (c % 2 == 1)
 		{
-			c = (c - 1) / 2;
+			c = (c + 1) / 2;
 		}
 		else
 		{
