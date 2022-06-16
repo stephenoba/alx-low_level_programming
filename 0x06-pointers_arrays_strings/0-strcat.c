@@ -2,7 +2,7 @@
 
 /**
  * _strcat - concatenates tw strings
- * @est: destination
+ * @dest: destination
  * @src: sorce
  * Return: concatenated string
  */
