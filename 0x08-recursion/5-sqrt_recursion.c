@@ -21,4 +21,6 @@ int sqrt_(int a, int b)
  * Return: square root
  */
 int _sqrt_recursion(int n)
+{
 	return (sqrt_(n, 0));
+}
