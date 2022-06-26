@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
@@ -31,8 +32,13 @@ int _isnumber(char s[])
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] <= 48 || s[i] >= 57)
+		if (!isdigit(s[i]))
 		{
+			if (s[0] == 45)
+			{
+				i++;
+				continue;
+			}
 			return (0);
 		}
 		i++;
