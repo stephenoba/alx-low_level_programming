@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
 /**
  * n_change - prints the number of change to be made from cents
  * @cents: cents
+ * @n: number of denuminations found
  * Return: success (0) or failure(1)
  */
 int n_change(int cents, int n)
@@ -51,7 +52,7 @@ int n_change(int cents, int n)
 			break;
 		}
 	}
-	return n_change(cents - d, n);
+	return (n_change(cents - d, n));
 }
 
 /**
