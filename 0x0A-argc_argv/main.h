@@ -8,7 +8,6 @@ int _abs(int n);
 int _isupper(int c);
 int _isdigit(int c);
 int _isnumber(char s[]);
-int n_change(int cents, int n);
 int _strlen(char *s);
 void _puts(char *s);
 char *_strcpy(char *dest, char *src);

@@ -11,12 +11,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents, n = 0;
+	int cents, d, n = 0;
 
 	if (argc != 2 || !_isnumber(argv[1]))
 	{
 		printf("Error\n");
-		return (1);
+		return (EXIT_FAILURE);
 	}
 
 	cents = atoi(argv[1]);
@@ -25,34 +25,26 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (EXIT_SUCCESS);
 	}
-	printf("%d\n", n_change(cents, n));
-	return (EXIT_SUCCESS);
-}
-
-/**
- * n_change - prints the number of change to be made from cents
- * @cents: cents
- * @n: number of denuminations found
- * Return: success (0) or failure(1)
- */
-int n_change(int cents, int n)
-{
-	int i, d;
-	int denums[] = {25, 10, 5, 2, 1};
-
-	if (cents <= 0)
-		return (n);
-
-	for (i = 0; i < 5; i++)
+	if (cents >= 25)
 	{
-		if (cents >= denums[i])
-		{
-			n += 1;
-			d = denums[i];
-			break;
-		}
+		n = cents / 25;
+		cents = cents % 25;
 	}
-	return (n_change(cents - d, n));
+	while (cents)
+	{
+		if (cents >= 10)
+			d = 10;
+		else if (cents >= 5)
+			d = 5;
+		else if (cents >= 2)
+			d = 2;
+		else if (cents >= 1)
+			d = 1;
+		cents -= d;
+		n++;
+	}
+	printf("%d\n", n);
+	return (EXIT_SUCCESS);
 }
 
 /**
