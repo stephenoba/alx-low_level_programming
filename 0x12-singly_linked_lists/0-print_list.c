@@ -5,8 +5,6 @@
  * print_list - Print linked list
  * @h: Head of the list
  * Return: number of nodes
- *
- * Description: prints the nodes in a singly linked list
  */
 size_t print_list(const list_t *h)
 {
