@@ -33,5 +33,6 @@ size_t print_list(const list_t *h)
 			break;
 		*temp = *temp->next;
 	}
+	free(temp);
 	return (i);
 }
