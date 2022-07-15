@@ -14,6 +14,9 @@ size_t print_list(const list_t *h)
 	list_t *temp;
 	int flag = 1;
 
+	if (h == NULL)
+		return (-1);
+
 	temp = malloc(sizeof(list_t));
 	if (temp == NULL)
 		return (-1);
