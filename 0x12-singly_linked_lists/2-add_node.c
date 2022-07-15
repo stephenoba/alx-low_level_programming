@@ -7,6 +7,7 @@ int _strlen(const char *str);
  * add_node - add a node
  * @head: head
  * @str: string value for new node
+ * Return: node
  *
  * Description: Adds a node to the begining of a list
  */
