@@ -11,28 +11,16 @@
 size_t print_list(const list_t *h)
 {
 	size_t i;
-	list_t *temp;
-	int flag = 1;
 
-	if (h == NULL)
-		return (-1);
-
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
-		return (-1);
-	*temp = *h;
 	i = 0;
-	while (flag)
+	while (h)
 	{
-		if (temp->str == NULL)
+		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%i] %s\n", temp->len, temp->str);
+			printf("[%i] %s\n", h->len, h->str);
 		i++;
-		if (temp->next == NULL)
-			break;
-		*temp = *temp->next;
+		h = h->next;
 	}
-	free(temp);
 	return (i);
 }
