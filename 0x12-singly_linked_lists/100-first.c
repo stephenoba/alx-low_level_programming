@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * first - prints to stdout before main
+ * print_first - prints to stdout before main
  */
 void __attribute__ ((constructor)) print_first()
 {
