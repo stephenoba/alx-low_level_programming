@@ -17,7 +17,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 		return (-1);
-	printf("%i %i %i\n", R_OK, W_OK, X_OK);
 
 	if (text_content)
 	{
