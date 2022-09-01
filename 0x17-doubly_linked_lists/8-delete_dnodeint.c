@@ -1,25 +1,7 @@
 #include "lists.h"
 
 /**
- * dlistint_len - gets the length of dlistint_t
- * @h: head of list
- *
- * Return: number of nodes
- */
-size_t dlistint_len(const dlistint_t *h)
-{
-	size_t len = 0;
-
-	while (h)
-	{
-		h = h->next;
-		len++;
-	}
-	return (len);
-}
-
-/**
- * delete_dnodelist_at_index - deleta a node at index
+ * delete_dnodeint_at_index - deleta a node at index
  * @head: pointer to head
  * @index: indext of node to be deleted
  *
