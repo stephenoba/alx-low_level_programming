@@ -12,8 +12,11 @@ void hash_table_print(const hash_table_t *ht)
 	char *repr, *key, *value;
 
 	repr = malloc(sizeof(char) * limit);
-	if (!repr)
+	if (!repr || !ht)
+	{
+		free(repr);
 		return;
+	}
 
 	i = 0;
 	repr[0] = '\0';
