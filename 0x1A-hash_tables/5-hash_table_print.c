@@ -10,7 +10,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	int flag = 0;
 	char *repr, *key, *value;
-	unsigned long int limit = 40000;
+	unsigned long int limit = 400000;
 
 	repr = malloc(sizeof(char) * limit);
 	if (!repr)
@@ -46,4 +46,5 @@ void hash_table_print(const hash_table_t *ht)
 	}
 	strcat(repr, "}");
 	printf("%s\n", repr);
+	free(repr);
 }
