@@ -8,6 +8,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *current_node;
 	unsigned long int i;
+	int flag = 0;
 	char *repr, *key, *value;
 	unsigned long int limit = 40000;
 
@@ -33,13 +34,14 @@ void hash_table_print(const hash_table_t *ht)
 				strcat(repr, "'");
 				strcat(repr, value);
 				strcat(repr, "'");
+				flag = 1;
 				current_node = current_node->next;
 				if (current_node)
 					strcat(repr, ", ");
 			}
 		}
 		i++;
-		if (ht->array[i])
+		if (ht->array[i] && flag)
 			strcat(repr, ", ");
 	}
 	strcat(repr, "}");
