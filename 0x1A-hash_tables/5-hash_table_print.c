@@ -7,10 +7,9 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *current_node;
-	unsigned long int i;
+	unsigned long int i, limit = 40000;
 	int flag = 0;
 	char *repr, *key, *value;
-	unsigned long int limit = 400000;
 
 	repr = malloc(sizeof(char) * limit);
 	if (!repr)
