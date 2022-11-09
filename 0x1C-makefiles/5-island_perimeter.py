@@ -18,6 +18,9 @@ def island_perimeter(grid):
     """
     # get locations of each unit (x, y)
     perimeter = 0
+    if not grid:
+        return 0
+
     for x in range(len(grid)):
         for y in range(len(grid[x])):
             if grid[x][y]:
