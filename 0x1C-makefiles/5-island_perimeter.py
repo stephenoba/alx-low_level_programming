@@ -29,7 +29,7 @@ def island_perimeter(grid):
                 # check east
                 if (y + 1) < len(grid[x]) and not grid[x][y+1]:
                     perimeter += 1
-                #check south
+                # check south
                 if (x + 1) < len(grid) and not grid[x+1][y]:
                     perimeter += 1
                 # check west
