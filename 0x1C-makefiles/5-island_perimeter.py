@@ -27,15 +27,19 @@ def island_perimeter(grid):
                 # check sourounding units and add 1 to perimeter
                 #   if there are no lands
                 # check north
-                if (x == 0 and grid[x][y]) or ((x - 1) >= 0 and not grid[x-1][y]):
+                if ((x == 0 and grid[x][y])
+                        or ((x - 1) >= 0 and not grid[x-1][y])):
                     perimeter += 1
                 # check east
-                if (y == len(grid[x]) - 1 and grid[x][y]) or ((y + 1) < len(grid[x]) and not grid[x][y+1]):
+                if ((y == len(grid[x]) - 1 and grid[x][y])
+                        or ((y + 1) < len(grid[x]) and not grid[x][y+1])):
                     perimeter += 1
                 # check south
-                if (x == len(grid)-1 and grid[x][y]) or ((x + 1) < len(grid) and not grid[x+1][y]):
+                if ((x == len(grid)-1 and grid[x][y])
+                        or ((x + 1) < len(grid) and not grid[x+1][y])):
                     perimeter += 1
                 # check west
-                if (y == 0 and grid[x][y]) or ((y - 1) >= 0 and not grid[x][y-1]):
+                if ((y == 0 and grid[x][y])
+                        or ((y - 1) >= 0 and not grid[x][y-1])):
                     perimeter += 1
     return perimeter
